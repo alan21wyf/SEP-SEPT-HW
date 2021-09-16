@@ -194,7 +194,7 @@ order by o.OrderDate
 -- #25
 select e1.FirstName, e2.FirstName
 from Employees e1 left outer join Employees e2 on e1.Title = e2.Title
-where e1.EmployeeID != e2.EmployeeID
+where e1.EmployeeID < e2.EmployeeID
 
 
 -- #26
