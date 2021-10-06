@@ -68,7 +68,7 @@ namespace Antra.CompanyApp.ConsoleApp
 
         public void Run()
         {
-            AddCustomer();
+            //AddCustomer();
             PrintCustomers();
         }
     }

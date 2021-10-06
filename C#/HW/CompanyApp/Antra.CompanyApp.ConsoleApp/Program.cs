@@ -6,10 +6,10 @@ namespace Antra.CompanyApp.ConsoleApp
     {
         static void Main(string[] args)
         {
-            ManageProduct manageProduct = new ManageProduct();
-            manageProduct.Run();
-            //ManageCustomer manageCustomer = new ManageCustomer();
-            //manageCustomer.Run();
+            //ManageProduct manageProduct = new ManageProduct();
+            //manageProduct.Run();
+            ManageCustomer manageCustomer = new ManageCustomer();
+            manageCustomer.Run();
         }
     }
 }

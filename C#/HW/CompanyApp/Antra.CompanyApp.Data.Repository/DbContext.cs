@@ -5,11 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Microsoft.Extensions.Configuration;
 
 namespace Antra.CompanyApp.Data.Repository
 {
     class DbContext
     {
+        string conn;
+        public DbContext()
+        {
+            conn = new ConfigurationBuilder().AddJsonFile("appSettings.json").Build().GetConnectionString("TestDB");
+        }
         public int Execute(string cmdText, Dictionary<string, object> parameters = null)
         {
             SqlConnection connection = new SqlConnection("Data Source=DESKTOP-ER90S1U\\ALAN;Initial Catalog=TestDB;Integrated Security=True");
@@ -44,7 +50,7 @@ namespace Antra.CompanyApp.Data.Repository
 
         public DataTable Query(string cmdText, Dictionary<string, object> parameters, CommandType cmdType = CommandType.Text)
         {
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-ER90S1U/ALAN;Initial Catalog=TestDB;Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-ER90S1U\\ALAN;Initial Catalog=TestDB;Integrated Security=True");
             SqlCommand cmd = new SqlCommand();
             try
             {

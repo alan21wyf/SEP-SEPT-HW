@@ -33,3 +33,4 @@ D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.ConsoleApp\obj\Debug\net5.
 D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.ConsoleApp\obj\Debug\net5.0\ref\Antra.CompanyApp.ConsoleApp.dll
 D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.ConsoleApp\obj\Debug\net5.0\Antra.CompanyApp.ConsoleApp.pdb
 D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.ConsoleApp\obj\Debug\net5.0\Antra.CompanyApp.ConsoleApp.genruntimeconfig.cache
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.ConsoleApp\bin\Debug\net5.0\appSettings.json
