@@ -1,0 +1,12 @@
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\bin\Debug\net5.0\Antra.CompanyApp.Data.Model.deps.json
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\bin\Debug\net5.0\Antra.CompanyApp.Data.Model.dll
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\bin\Debug\net5.0\ref\Antra.CompanyApp.Data.Model.dll
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\bin\Debug\net5.0\Antra.CompanyApp.Data.Model.pdb
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.csproj.AssemblyReference.cache
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.AssemblyInfoInputs.cache
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.AssemblyInfo.cs
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.csproj.CoreCompileInputs.cache
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.dll
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\ref\Antra.CompanyApp.Data.Model.dll
+D:\Antra\Lectures-Sept\C#\CompanyApp\Antra.CompanyApp.Data.Model\obj\Debug\net5.0\Antra.CompanyApp.Data.Model.pdb
