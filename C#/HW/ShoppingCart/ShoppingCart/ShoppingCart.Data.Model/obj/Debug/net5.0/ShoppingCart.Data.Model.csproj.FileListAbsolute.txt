@@ -1,0 +1,12 @@
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\bin\Debug\net5.0\ShoppingCart.Data.Model.deps.json
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\bin\Debug\net5.0\ShoppingCart.Data.Model.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\bin\Debug\net5.0\ref\ShoppingCart.Data.Model.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\bin\Debug\net5.0\ShoppingCart.Data.Model.pdb
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.csproj.AssemblyReference.cache
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.AssemblyInfoInputs.cache
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.AssemblyInfo.cs
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.csproj.CoreCompileInputs.cache
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ref\ShoppingCart.Data.Model.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Model\obj\Debug\net5.0\ShoppingCart.Data.Model.pdb

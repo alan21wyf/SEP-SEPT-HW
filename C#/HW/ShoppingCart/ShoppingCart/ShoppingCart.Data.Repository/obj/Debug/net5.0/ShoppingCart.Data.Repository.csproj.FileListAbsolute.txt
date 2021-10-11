@@ -1,0 +1,15 @@
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\bin\Debug\net5.0\ShoppingCart.Data.Repository.deps.json
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\bin\Debug\net5.0\ShoppingCart.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\bin\Debug\net5.0\ref\ShoppingCart.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\bin\Debug\net5.0\ShoppingCart.Data.Repository.pdb
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\bin\Debug\net5.0\ShoppingCart.Data.Model.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\bin\Debug\net5.0\ShoppingCart.Data.Model.pdb
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.csproj.AssemblyReference.cache
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.AssemblyInfoInputs.cache
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.AssemblyInfo.cs
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.csproj.CoreCompileInputs.cache
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.csproj.CopyComplete
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ref\ShoppingCart.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\HW2\ShoppingCart\ShoppingCart.Data.Repository\obj\Debug\net5.0\ShoppingCart.Data.Repository.pdb

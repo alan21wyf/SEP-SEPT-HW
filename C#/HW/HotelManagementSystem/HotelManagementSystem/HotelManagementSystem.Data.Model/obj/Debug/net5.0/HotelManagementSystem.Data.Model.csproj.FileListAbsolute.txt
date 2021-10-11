@@ -1,0 +1,12 @@
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\bin\Debug\net5.0\HotelManagementSystem.Data.Model.deps.json
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\bin\Debug\net5.0\HotelManagementSystem.Data.Model.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\bin\Debug\net5.0\ref\HotelManagementSystem.Data.Model.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\bin\Debug\net5.0\HotelManagementSystem.Data.Model.pdb
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.csproj.AssemblyReference.cache
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.AssemblyInfoInputs.cache
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.AssemblyInfo.cs
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.csproj.CoreCompileInputs.cache
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\ref\HotelManagementSystem.Data.Model.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Model\obj\Debug\net5.0\HotelManagementSystem.Data.Model.pdb

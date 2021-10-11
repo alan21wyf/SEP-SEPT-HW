@@ -1,0 +1,15 @@
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\bin\Debug\net5.0\HotelManagementSystem.Data.Repository.deps.json
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\bin\Debug\net5.0\HotelManagementSystem.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\bin\Debug\net5.0\ref\HotelManagementSystem.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\bin\Debug\net5.0\HotelManagementSystem.Data.Repository.pdb
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\bin\Debug\net5.0\HotelManagementSystem.Data.Model.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\bin\Debug\net5.0\HotelManagementSystem.Data.Model.pdb
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.csproj.AssemblyReference.cache
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.AssemblyInfoInputs.cache
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.AssemblyInfo.cs
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.csproj.CoreCompileInputs.cache
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.csproj.CopyComplete
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\ref\HotelManagementSystem.Data.Repository.dll
+D:\Antra\Homework-Sept\C#\New folder\HotelManagementSystem\HotelManagementSystem.Data.Repository\obj\Debug\net5.0\HotelManagementSystem.Data.Repository.pdb
