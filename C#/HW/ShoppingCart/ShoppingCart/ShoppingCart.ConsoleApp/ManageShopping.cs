@@ -31,6 +31,10 @@ namespace ShoppingCart.ConsoleApp
                         shoppingService.Shop();
                         Console.ReadLine();
                         break;
+                    case (int)Options.RemoveFromCart:
+                        shoppingService.Remove();
+                        Console.ReadLine();
+                        break;
                     case (int)Options.ShowCart:
                         shoppingService.ShowCart();
                         Console.ReadLine();

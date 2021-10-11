@@ -19,6 +19,7 @@ namespace ShoppingCart.ConsoleApp.UI
     enum Options
     {
         Shop = 1,
+        RemoveFromCart,
         ShowCart,
         CheckOut,
         OrderHistory

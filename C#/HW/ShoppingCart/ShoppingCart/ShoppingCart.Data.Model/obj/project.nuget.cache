@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "md8AAkHY7WClei9PAH035bxTp1S9Kvc1XxA0UcvwxJFfr7UuGVdG40rtBHx2/GQtkEaALXw333rrDuk/uYKehQ==",
+  "dgSpecHash": "PHLFf6WSMjapr11l+NiO1g1aOKYYQ9/pZpCg1uxz65l7u2EDeFO29eIevZV8n9RJUpQ82qtEAHAraUYvVh2mGA==",
   "success": true,
-  "projectFilePath": "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.Data.Model\\ShoppingCart.Data.Model.csproj",
+  "projectFilePath": "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.Data.Model\\ShoppingCart.Data.Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

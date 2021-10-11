@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3OBW/RxKkllLg4xS/1P/rKGG5SpoZe0SEiLp4LPlkzb81eWhzB9zEvHCVIKSvST3SReVaymeg0puxQ282Z+lIA==",
+  "dgSpecHash": "0ez1XPDxZ3kzoDt167LHSLcmezT1jJQancURvDyzmTWbZkLr5yMJ20NIBviGkFhs8ZUvNyLTkp1YYe9fRlXzgA==",
   "success": true,
-  "projectFilePath": "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.ConsoleApp\\ShoppingCart.ConsoleApp.csproj",
+  "projectFilePath": "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.ConsoleApp\\ShoppingCart.ConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wyhwy\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\wyhwy\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",

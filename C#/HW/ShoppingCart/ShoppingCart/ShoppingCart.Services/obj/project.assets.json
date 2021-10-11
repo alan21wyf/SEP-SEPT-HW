@@ -786,11 +786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
+      "projectUniqueName": "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
       "projectName": "ShoppingCart.Services",
-      "projectPath": "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
+      "projectPath": "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
       "packagesPath": "C:\\Users\\wyhwy\\.nuget\\packages\\",
-      "outputPath": "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.Services\\obj\\",
+      "outputPath": "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wyhwy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -807,8 +807,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.Data.Repository\\ShoppingCart.Data.Repository.csproj": {
-              "projectPath": "D:\\Antra\\Homework-Sept\\C#\\HW2\\ShoppingCart\\ShoppingCart.Data.Repository\\ShoppingCart.Data.Repository.csproj"
+            "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.Data.Repository\\ShoppingCart.Data.Repository.csproj": {
+              "projectPath": "D:\\Antra\\Homework-Sept\\C#\\ShoppingCart\\ShoppingCart\\ShoppingCart.Data.Repository\\ShoppingCart.Data.Repository.csproj"
             }
           }
         }
