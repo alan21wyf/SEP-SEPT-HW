@@ -1,0 +1,81 @@
+﻿@model ApplicationCore.Models.MovieDetailsResponseModel;
+
+@{
+    ViewData["Title"] = "Movie Detail";
+}
+
+
+<div class="container-fluid" >
+    <div class="container-fluid row ">
+        <div class="col-4">
+            <img src="@Model.PosterUrl" />
+        </div>
+        <div class="col-5">
+            <div class="row"><h3>@Model.Title</h3></div>
+            <div class="row">
+                <span>@Model.Tagline</span>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <span>@Model.RunTime m|@Model.ReleaseDate</span>
+                </div>
+                <div class="col-8">
+                    @foreach (var genre in Model.Genres)
+                    {
+                        <span class="badge rounded-pill badge-secondary" style="color:white">@genre.Name</span>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <span class="badge badge-success">@Model.Rating</span>
+            </div>
+            <div class="row">
+                <p>@Model.Overview</p>
+            </div>
+        </div>
+        <div class="col-3 container-fluid">
+            <div class="row">
+                <a class="btn btn-outline-primary">Review</a>
+            </div>
+            <div class="row">
+                <a class="btn btn-light">Buy $@Model.Price</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid row">
+        <div class="col-4">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">MOVIE FACTS</li>
+                <li class="list-group-item">Release Date <span class="badge badge-secondary rounded-pill">@Model.ReleaseDate</span></li>
+                <li class="list-group-item">Run Time <span class="badge badge-secondary rounded-pill">@Model.RunTime</span></li>
+                <li class="list-group-item">Box Office <span class="badge badge-secondary rounded-pill">$@Model.Revenue</span></li>
+                <li class="list-group-item">Budget <span class="badge badge-secondary rounded-pill">$@Model.Budget</span></li>
+                <li class="list-group-item"></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">TRAILERS</li>
+                @foreach (var trailer in Model.Trailers)
+                {
+                    <li><a href="@trailer.TrailerUrl">@trailer.Name</a></li>
+                }
+            </ul>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-7">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cast</li>
+                @foreach (var cast in Model.Casts)
+                {
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-4"><img src="@cast.ProfilePath" /></div>
+                            <div class="col-4">@cast.Name</div>
+                            <div class="col-4">@cast.Character</div>
+                        </div>
+                    </li>
+
+                }
+            </ul>
+        </div>
+    </div>
+</div>

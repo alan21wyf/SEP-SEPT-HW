@@ -22,11 +22,11 @@ namespace MovieShopMVC.Controllers
 
         [HttpGet]
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var movieCards = _movieService.GetTop30RevenueMovies();
-            ViewBag.PageTitle = "Top Revenue Movies";
-            ViewData["xyz"] = "Test data";
+            var movieCards = await _movieService.GetTop30RevenueMovies();
+            //ViewBag.PageTitle = "Top Revenue Movies";
+            //ViewData["xyz"] = "Test data";
             return View(movieCards);
         }
 

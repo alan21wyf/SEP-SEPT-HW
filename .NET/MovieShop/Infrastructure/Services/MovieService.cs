@@ -16,9 +16,71 @@ namespace Infrastructure.Services
         {
             _movieRepository = movieRepository;
         }
-        public List<MovieCardResponseModel> GetTop30RevenueMovies()
+
+        public async Task<MovieDetailsResponseModel> GetMovieDetails(int id)
         {
-            var movies = _movieRepository.GetTop30RevenueMovies();
+            var movie = await _movieRepository.GetMovieById(id);
+            if (movie == null)
+            {
+                throw new Exception($"No Movie Found for This {id}");
+            }
+            var movieDetails = new MovieDetailsResponseModel
+            {
+                Id = movie.Id,
+                Budget = movie.Budget,
+                Overview = movie.Overview,
+                Price = movie.Price,
+                PosterUrl = movie.PosterUrl,
+                Revenue = movie.Revenue,
+                ReleaseDate = movie.ReleaseDate.GetValueOrDefault(),
+                Rating = movie.Rating,
+                Tagline = movie.Tagline,
+                Title = movie.Title,
+                RunTime = movie.RunTime,
+                BackdropUrl = movie.BackdropUrl,
+                ImdbUrl = movie.ImdbUrl,
+                TmdbUrl = movie.TmdbUrl
+            };
+
+            foreach (var genre in movie.Genres)
+            {
+                movieDetails.Genres.Add(new GenreModel
+                {
+                    Id = genre.GenreId,
+                    Name = genre.Genre.Name
+                });
+            }
+
+            foreach (var cast in movie.Casts)
+            {
+                movieDetails.Casts.Add(new CastResponseModel
+                {
+                    Id = cast.CastId,
+                    Name = cast.Cast.Name,
+                    Character = cast.Character,
+                    ProfilePath = cast.Cast.ProfilePath
+                });
+
+            }
+
+            foreach (var trailer in movie.Trailers)
+            {
+                movieDetails.Trailers.Add(new TrailerResponseModel
+                {
+                    Id = trailer.Id,
+                    MovieId = trailer.MovieId,
+                    Name = trailer.Name,
+                    TrailerUrl = trailer.TrailerUrl
+                });
+
+            }
+
+            return movieDetails;
+        }
+
+        public async Task<List<MovieCardResponseModel>> GetTop30RevenueMovies()
+        {
+            var movies = await _movieRepository.GetTop30RevenueMovies();
             List<MovieCardResponseModel> movieCards = new List<MovieCardResponseModel>();
             foreach (var movie in movies)
             {
