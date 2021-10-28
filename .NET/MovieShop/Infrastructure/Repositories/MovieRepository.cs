@@ -28,6 +28,9 @@ namespace Infrastructure.Repositories
         {
             var movie = await _dbContext.Movies.Include(m => m.Casts).ThenInclude(m => m.Cast)
                 .Include(m => m.Genres).ThenInclude(m => m.Genre).Include(m => m.Trailers).FirstOrDefaultAsync(m => m.Id == id);
+            var movieRating = await _dbContext.Reviews.Where(r => r.MovieId == id).DefaultIfEmpty()
+                .AverageAsync(r => r == null ? 0 : r.Rating);
+            if (movieRating > 0) { movie.Rating = movieRating; }
             return movie;
         }
     }

@@ -42,6 +42,7 @@ namespace Infrastructure.Services
                 TmdbUrl = movie.TmdbUrl
             };
 
+
             foreach (var genre in movie.Genres)
             {
                 movieDetails.Genres.Add(new GenreModel
@@ -86,7 +87,7 @@ namespace Infrastructure.Services
             {
                 movieCards.Add(new MovieCardResponseModel
                 {
-                    ID = movie.Id,
+                    Id = movie.Id,
                     Title = movie.Title,
                     PosterUrl = movie.PosterUrl
                 });

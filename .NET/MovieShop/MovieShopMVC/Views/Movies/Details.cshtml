@@ -6,7 +6,8 @@
 
 
 <div class="container-fluid" >
-    <div class="container-fluid row ">
+    <div class="container-fluid row">
+        <!-- style="background-image: url(Model.PosterUrl); background-repeat:no-repeat; background-size:cover;background-position:center center" for background image. Current is too low on resolution.-->
         <div class="col-4">
             <img src="@Model.PosterUrl" />
         </div>
@@ -40,10 +41,13 @@
             <div class="row">
                 <a class="btn btn-light">Buy $@Model.Price</a>
             </div>
+            <div class="row">
+                <a class="btn btn-light">Add To My Favorite</a>
+            </div>
         </div>
     </div>
     <div class="container-fluid row">
-        <div class="col-4">
+        <div class="col-3">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">MOVIE FACTS</li>
                 <li class="list-group-item">Release Date <span class="badge badge-secondary rounded-pill">@Model.ReleaseDate</span></li>
@@ -61,19 +65,14 @@
             </ul>
         </div>
         <div class="col-1"></div>
-        <div class="col-7">
+        <div class="col-8">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Cast</li>
                 @foreach (var cast in Model.Casts)
                 {
                     <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4"><img src="@cast.ProfilePath" /></div>
-                            <div class="col-4">@cast.Name</div>
-                            <div class="col-4">@cast.Character</div>
-                        </div>
+                        <partial name="_CastInfo" model="@cast" />
                     </li>
-
                 }
             </ul>
         </div>

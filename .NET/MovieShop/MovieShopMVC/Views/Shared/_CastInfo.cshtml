@@ -1,0 +1,11 @@
+﻿@model ApplicationCore.Models.CastResponseModel
+
+<div class="row">
+    <div class="col-4">
+        <a asp-controller="Cast" asp-action="Details" asp-route-id="@Model.Id">
+            <img src="@Model.ProfilePath" class="rounded-circle img-fluid" style="width:20%;height:auto;" alt="@Model.Name" />
+        </a>
+    </div>
+    <div class="col-4">@Model.Name</div>
+    <div class="col-4">@Model.Character</div>
+</div>
