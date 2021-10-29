@@ -38,7 +38,6 @@ D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\ref\MovieSho
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\MovieShopMVC.pdb
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\MovieShopMVC.genruntimeconfig.cache
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\MovieShopMVC.csproj.CopyComplete
-D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\Home\TopMovies.cshtml.g.cs
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\bin\Debug\net5.0\ApplicationCore.dll
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\bin\Debug\net5.0\Infrastructure.dll
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\bin\Debug\net5.0\ApplicationCore.pdb
@@ -156,3 +155,5 @@ D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\User\Purchases.cshtml.g.cs
+D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\User\Favorites.cshtml.g.cs

@@ -96,5 +96,38 @@ namespace Infrastructure.Services
 
             return null;
         }
+
+        public async Task<List<MovieCardResponseModel>> GetUserPurchases(int id)
+        {
+            var movies = await _userRepository.GetPurchasedMovies(id);
+            List<MovieCardResponseModel> purchases = new List<MovieCardResponseModel> ();
+            foreach (var movie in movies)
+            {
+                purchases.Add(new MovieCardResponseModel
+                {
+                    Id = movie.Id,
+                    Title = movie.Title,
+                    PosterUrl = movie.PosterUrl
+                });
+            }
+            return purchases;
+        }
+
+        public async Task<List<MovieCardResponseModel>> GetUserFavorites(int id)
+        {
+            var movies = await _userRepository.GetFavoriteMovies(id);
+            List<MovieCardResponseModel> favorites = new List<MovieCardResponseModel>();
+            foreach (var movie in movies)
+            {
+                favorites.Add(new MovieCardResponseModel
+                {
+                    Id = movie.Id,
+                    Title = movie.Title,
+                    PosterUrl = movie.PosterUrl
+                });
+            }
+            return favorites;
+        }
+
     }
 }

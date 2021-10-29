@@ -11,5 +11,7 @@ namespace ApplicationCore.ServiceInterfaces
     {
         Task<int> ResigerUser(UserRegisterRequestModel requestModel);
         Task<UserLoginResponseModel> LoginUser(UserLoginRequestModel requestModel);
+        Task<List<MovieCardResponseModel>> GetUserPurchases(int id);
+        Task<List<MovieCardResponseModel>> GetUserFavorites(int id);
     }
 }

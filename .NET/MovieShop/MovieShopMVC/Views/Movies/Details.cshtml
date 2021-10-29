@@ -6,8 +6,8 @@
 
 
 <div class="container-fluid" >
-    <div class="container-fluid row">
-        <!-- style="background-image: url(Model.PosterUrl); background-repeat:no-repeat; background-size:cover;background-position:center center" for background image. Current is too low on resolution.-->
+    <div class="container-fluid row" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url( @Model.BackdropUrl ); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(Model.PosterUrl); background-repeat:no-repeat; background-size:cover;background-position:center center" for background image. Current is too low on resolution.-->
         <div class="col-4">
             <img src="@Model.PosterUrl" />
         </div>
@@ -18,7 +18,7 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                    <span>@Model.RunTime m|@Model.ReleaseDate</span>
+                    <span>@Model.RunTime m|@Model.ReleaseDate.Value.ToShortDateString()</span>
                 </div>
                 <div class="col-8">
                     @foreach (var genre in Model.Genres)
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="row">
-                <span class="badge badge-success">@Model.Rating</span>
+                <span class="badge badge-success">@Model.Rating?.ToString("0.00")</span>
             </div>
             <div class="row">
                 <p>@Model.Overview</p>
@@ -45,12 +45,13 @@
                 <a class="btn btn-light">Add To My Favorite</a>
             </div>
         </div>
+
     </div>
     <div class="container-fluid row">
         <div class="col-3">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">MOVIE FACTS</li>
-                <li class="list-group-item">Release Date <span class="badge badge-secondary rounded-pill">@Model.ReleaseDate</span></li>
+                <li class="list-group-item">Release Date <span class="badge badge-secondary rounded-pill">@Model.ReleaseDate.Value.ToShortDateString()</span></li>
                 <li class="list-group-item">Run Time <span class="badge badge-secondary rounded-pill">@Model.RunTime</span></li>
                 <li class="list-group-item">Box Office <span class="badge badge-secondary rounded-pill">$@Model.Revenue</span></li>
                 <li class="list-group-item">Budget <span class="badge badge-secondary rounded-pill">$@Model.Budget</span></li>
