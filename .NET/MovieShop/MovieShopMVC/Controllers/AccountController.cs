@@ -23,8 +23,13 @@ namespace MovieShopMVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterRequestModel requestModel)
         {
+            // check if model is valid
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             var newUser = await _userService.ResigerUser(requestModel);
-            return View();
+            return RedirectToAction("Login");
         }
 
         
@@ -56,13 +61,14 @@ namespace MovieShopMVC.Controllers
             // Claims => 
             // Driving licence => Name, Daof, Expire, 
             // create all the necessary claims inside claims object
-            var claims = new List<Claim> 
+            var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.GivenName, user.FirstName),
                 new Claim(ClaimTypes.Surname, user.LastName),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToShortDateString())
+                new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToShortDateString()),
+                new Claim("FullName", user.FirstName + " " + user.LastName)
             };
 
             // Identity: use identity object to store claims
@@ -84,7 +90,7 @@ namespace MovieShopMVC.Controllers
             //invalidate the cookie and redirect to login
 
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
     }
 }

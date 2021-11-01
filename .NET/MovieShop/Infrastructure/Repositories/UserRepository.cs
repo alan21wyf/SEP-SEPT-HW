@@ -10,21 +10,13 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : EfRepository<User>, IUserRepository
     {
-        private readonly MovieShopDbContext _dbContext;
 
-        public UserRepository(MovieShopDbContext dbContext)
+        public UserRepository(MovieShopDbContext dbContext):base(dbContext)
         {
-            _dbContext = dbContext;
         }
 
-        public async Task<User> AddUser(User user)
-        {
-            await _dbContext.Users.AddAsync(user);
-            await _dbContext.SaveChangesAsync();
-            return user;
-        }
 
         public async Task<IEnumerable<Movie>> GetFavoriteMovies(int id)
         {
@@ -36,6 +28,11 @@ namespace Infrastructure.Repositories
                 movies.Add(movie);
             }
             return movies;   
+        }
+
+        public Task<IEnumerable<Review>> GetMovieReviews(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Movie>> GetPurchasedMovies(int id)

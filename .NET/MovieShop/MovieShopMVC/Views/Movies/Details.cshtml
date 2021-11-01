@@ -9,7 +9,7 @@
     <div class="container-fluid row" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url( @Model.BackdropUrl ); background-repeat: no-repeat; background-size: cover; background-position: center center;">
     <!-- style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(Model.PosterUrl); background-repeat:no-repeat; background-size:cover;background-position:center center" for background image. Current is too low on resolution.-->
         <div class="col-4">
-            <img src="@Model.PosterUrl" />
+            <img src="@Model.PosterUrl" class="img-fluid"/>
         </div>
         <div class="col-5">
             <div class="row"><h3>@Model.Title</h3></div>
@@ -36,13 +36,13 @@
         </div>
         <div class="col-3 container-fluid">
             <div class="row">
-                <a class="btn btn-outline-primary">Review</a>
+                <a class="btn btn-outline-primary" asp-controller="User" asp-action="Review">Review</a>
             </div>
             <div class="row">
-                <a class="btn btn-light">Buy $@Model.Price</a>
+                <a class="btn btn-light" asp-controller="User" asp-action="Purchase">Buy $@Model.Price</a>
             </div>
             <div class="row">
-                <a class="btn btn-light">Add To My Favorite</a>
+                <a class="btn btn-light" asp-controller="User" asp-action="Favorite">Add To My Favorite</a>
             </div>
         </div>
 

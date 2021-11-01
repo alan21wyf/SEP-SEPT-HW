@@ -11,7 +11,21 @@ namespace ApplicationCore.ServiceInterfaces
     {
         Task<int> ResigerUser(UserRegisterRequestModel requestModel);
         Task<UserLoginResponseModel> LoginUser(UserLoginRequestModel requestModel);
-        Task<List<MovieCardResponseModel>> GetUserPurchases(int id);
-        Task<List<MovieCardResponseModel>> GetUserFavorites(int id);
+
+        Task AddFavorite(FavoriteRequestModel favoriteRequestModel);
+        Task RemovieFavorite(FavoriteRequestModel favoriteRequestModel);
+        Task<List<FavoriteResponseModel>> GetUserFavorites(int id);
+
+
+        Task AddMovieReview(ReviewRequestModel reviewRequest);
+        Task UpdateMovieReview(ReviewRequestModel reviewRequest);
+        Task DeleteMovieReview(int userId, int movieId);
+        Task<List<UserReviewResponseModel>> GetUserReviews(int id);
+
+
+        Task<bool> PurchaseMovie(PurchaseRequestModel purchaseRequest, int userId);
+        Task<bool> IsMoviePurchased(PurchaseRequestModel purchaseRequest, int userId);
+        Task<List<PurchaseResponseModel>> GetUserPurchases(int id);
+        Task<PurchaseDetailsResponseModel> GetPurchasesDetails(int userId, int movieId);
     }
 }

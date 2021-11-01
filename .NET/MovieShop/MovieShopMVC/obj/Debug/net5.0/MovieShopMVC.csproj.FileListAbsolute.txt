@@ -157,3 +157,6 @@ D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\bin\Debug\net5.0\Microsoft.As
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\User\Purchases.cshtml.g.cs
 D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\User\Favorites.cshtml.g.cs
+D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\Shared\_FavoriteCard.cshtml.g.cs
+D:\Antra\Homework-Sept\.NET\MovieShop\MovieShopMVC\obj\Debug\net5.0\Razor\Views\User\Review.cshtml.g.cs
