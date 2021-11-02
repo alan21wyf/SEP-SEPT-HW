@@ -8,8 +8,13 @@ namespace ApplicationCore.Models
 {
     public class PurchaseResponseModel
     {
-        public int MovieId { get; set; }
-        public string Title { get; set; }
-        public string PosterUrl { get; set; }
+        public int UserId { get; set; }
+        public int TotalMoviesPurchased { get; set; }
+        public List<PurchasedMovieResponseModel> PurchasedMovies { get; set; }
+
+        public class PurchasedMovieResponseModel : MovieCardResponseModel
+        {
+            public PurchaseDetailsResponseModel Details { get; set; }
+        }
     }
 }

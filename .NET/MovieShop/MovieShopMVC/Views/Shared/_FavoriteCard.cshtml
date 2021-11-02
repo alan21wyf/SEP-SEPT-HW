@@ -1,7 +1,10 @@
-﻿@model ApplicationCore.Models.FavoriteResponseModel
+﻿@model ApplicationCore.Models.FavoriteResponseModel.FavoriteMovieResponseModel
 
 <div class="card mb-4">
-    <a asp-controller="Movies" asp-action="Details" asp-route-id="@Model.MovieId">
+    <a asp-controller="Movies" asp-action="Details" asp-route-id="@Model.Id">
         <img src="@Model.PosterUrl" class="img-fluid" alt="@Model.Title" />
     </a>
+    <form asp-controller="Favorite" asp-action="RemoveFavorite" asp-route-MovieId="@Model.Id" method="post">
+        <button type="submit" class="btn btn-light">Remove</button>
+    </form>
 </div>

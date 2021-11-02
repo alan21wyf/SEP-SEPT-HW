@@ -8,8 +8,11 @@ namespace ApplicationCore.Models
 {
     public class FavoriteResponseModel
     {
-        public int MovieId { get; set; }
-        public string Title { get; set; }
-        public string PosterUrl { get; set; }
+        public int UserId { get; set; }
+        public List<FavoriteMovieResponseModel> FavoriteMovies { get; set; }
+        public class FavoriteMovieResponseModel : MovieCardResponseModel
+        {
+
+        }
     }
 }

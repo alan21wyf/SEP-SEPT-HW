@@ -29,7 +29,37 @@ namespace Infrastructure.Repositories
             var movieRating = await _dbContext.Reviews.Where(r => r.MovieId == id).DefaultIfEmpty()
                 .AverageAsync(r => r == null ? 0 : r.Rating);
             if (movieRating > 0) { movie.Rating = movieRating; }
+            var reviews = await _dbContext.Reviews.Where(r => r.MovieId == id).ToListAsync();
+            if (reviews != null)
+            {
+                movie.Reviews = reviews;
+            }
             return movie;
+        }
+
+        public async Task<IEnumerable<Movie>> GetHighest100RatedMovies()
+        {
+            var topRatedMovies = await _dbContext.Reviews.Include(m => m.Movie)
+                                     .GroupBy(r => new
+                                     {
+                                         Id = r.MovieId,
+                                         r.Movie.PosterUrl,
+                                         r.Movie.Title,
+                                         r.Movie.ReleaseDate
+                                     })
+                                     .OrderByDescending(g => g.Average(m => m.Rating))
+                                     .Select(m => new Movie
+                                     {
+                                         Id = m.Key.Id,
+                                         PosterUrl = m.Key.PosterUrl,
+                                         Title = m.Key.Title,
+                                         ReleaseDate = m.Key.ReleaseDate,
+                                         Rating = m.Average(x => x.Rating)
+                                     })
+                                     .Take(100)
+                                     .ToListAsync();
+
+            return topRatedMovies;
         }
     }
 }

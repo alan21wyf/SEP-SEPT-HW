@@ -95,5 +95,53 @@ namespace Infrastructure.Services
 
             return movieCards;
         }
+
+        public async Task<List<MovieCardResponseModel>> GetAllMovies()
+        {
+            var movies = await _movieRepository.GetAll();
+            List<MovieCardResponseModel> movieCards = new List<MovieCardResponseModel>();
+            foreach (var movie in movies)
+            {
+                movieCards.Add(new MovieCardResponseModel
+                {
+                    Id = movie.Id,
+                    Title = movie.Title,
+                    PosterUrl = movie.PosterUrl
+                });
+            }
+            return movieCards;
+        }
+
+        public async Task<List<MovieCardResponseModel>> GetTopRatedMovies()
+        {
+            var movies = await _movieRepository.GetHighest100RatedMovies();
+            List<MovieCardResponseModel> movieCards = new List<MovieCardResponseModel>();
+            foreach (var movie in movies)
+            {
+                movieCards.Add(new MovieCardResponseModel
+                {
+                    Id = movie.Id,
+                    Title = movie.Title,
+                    PosterUrl = movie.PosterUrl
+                });
+            }
+            return movieCards;
+        }
+
+        public async Task<List<ReviewResponseModel>> GetMovieReviews(int id)
+        {
+            var movie = await _movieRepository.GetMovieById(id);
+            var reviews = new List<ReviewResponseModel>();
+            foreach (var review in movie.Reviews)
+            {
+                reviews.Add(new ReviewResponseModel
+                {
+                    MovieId = review.MovieId,
+                    ReviewText = review.ReviewText,
+                    Rating = review.Rating,
+                });
+            }
+            return reviews;
+        }
     }
 }

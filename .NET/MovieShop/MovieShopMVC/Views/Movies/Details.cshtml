@@ -39,10 +39,16 @@
                 <a class="btn btn-outline-primary" asp-controller="User" asp-action="Review">Review</a>
             </div>
             <div class="row">
-                <a class="btn btn-light" asp-controller="User" asp-action="Purchase">Buy $@Model.Price</a>
+                <form asp-controller="User" asp-action="Purchase" asp-route-MovieId="@Model.Id" method="post">
+                    <button type="submit" class="btn btn-light">Buy</button>
+                </form>
+                @*<a class="btn btn-light" asp-controller="User" asp-action="Purchase">Buy $@Model.Price</a>*@
             </div>
             <div class="row">
-                <a class="btn btn-light" asp-controller="User" asp-action="Favorite">Add To My Favorite</a>
+                <form asp-controller="User" asp-action="Favorite" asp-route-MovieId="@Model.Id" method="post">
+                    <button type="submit" class="btn btn-light">Add To My Favorite</button>
+                </form>
+                @*<a class="btn btn-light" asp-controller="User" asp-action="Favorite">Add To My Favorite</a>*@
             </div>
         </div>
 

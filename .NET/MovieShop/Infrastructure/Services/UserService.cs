@@ -9,6 +9,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static ApplicationCore.Models.FavoriteResponseModel;
+using static ApplicationCore.Models.PurchaseResponseModel;
 
 namespace Infrastructure.Services
 {
@@ -144,41 +146,51 @@ namespace Infrastructure.Services
 
 
 
-        public async Task AddFavorite(FavoriteRequestModel favoriteRequestModel)
+        public async Task AddFavorite(FavoriteRequestModel favoriteRequestModel, int userId)
         {
+            var favorited = await _favoriteRepository.Get(f => f.UserId == userId && f.MovieId == favoriteRequestModel.MovieId);
+            if (favorited.Count() != 0)
+            {
+                throw new Exception("You have already favorited this movie.");
+            }
             var favorite = new Favorite
             {
                 MovieId = favoriteRequestModel.MovieId,
-                UserId = favoriteRequestModel.UserId
+                UserId = userId
             };
 
-            await _favoriteRepository.Add(favorite);
+            var dbFavorite = await _favoriteRepository.Add(favorite);
         }
 
-        public async Task RemovieFavorite(FavoriteRequestModel favoriteRequestModel)
+        public async Task RemoveFavorite(FavoriteRequestModel favoriteRequestModel, int userId)
         {
-            var dbFavorite = await _favoriteRepository.GetById(favoriteRequestModel.Id);
-            if (dbFavorite==null)
+            var dbFavorite = await _favoriteRepository.Get(f => f.MovieId == favoriteRequestModel.MovieId && f.UserId == userId);
+            if (dbFavorite.Count() == 0)
             {
                 throw new Exception("You haven't Favorite the Movie yet.");
             }
-            await _favoriteRepository.Delete(dbFavorite);
+            await _favoriteRepository.Delete(dbFavorite.First());
         }
 
-        public async Task<List<FavoriteResponseModel>> GetUserFavorites(int id)
+        public async Task<FavoriteResponseModel> GetUserFavorites(int id)
         {
             var movies = await _userRepository.GetFavoriteMovies(id);
-            List<FavoriteResponseModel> favorites = new List<FavoriteResponseModel>();
+            List<FavoriteMovieResponseModel> favoriteMovieCards = new List<FavoriteMovieResponseModel>();
             foreach (var movie in movies)
             {
-                favorites.Add(new FavoriteResponseModel
+                favoriteMovieCards.Add(new FavoriteMovieResponseModel
                 {
-                    MovieId = movie.Id,
+                    Id = movie.Id,
                     Title = movie.Title,
                     PosterUrl = movie.PosterUrl
                 });
             }
-            return favorites;
+            FavoriteResponseModel favoriteResponseModel = new FavoriteResponseModel 
+            {
+                UserId = id,
+                FavoriteMovies = favoriteMovieCards
+            };
+            return favoriteResponseModel;
         }
 
 
@@ -231,13 +243,12 @@ namespace Infrastructure.Services
             {
                 throw new Exception("You have already purchased this movie.");
             }
+            
             Purchase purchase = new Purchase
             {
                 MovieId = purchaseRequest.MovieId,
-                UserId = purchaseRequest.UserId,
-                PurchaseDateTime = DateTime.Now,
-                PurchaseNumber = Guid.NewGuid(),
-                TotalPrice = purchaseRequest.TotalPrice
+                UserId = userId,
+                TotalPrice = 3.4m
             };
             var p = await _purchaseRepository.Add(purchase);
             return p == null ? false : true;
@@ -245,28 +256,54 @@ namespace Infrastructure.Services
 
         public async Task<bool> IsMoviePurchased(PurchaseRequestModel purchaseRequest, int userId)
         {
-            throw new NotImplementedException();
+            var purchase = await _purchaseRepository.Get(p => p.MovieId == purchaseRequest.MovieId && p.UserId == userId);
+            if (purchase.Count() == 0)
+            {
+                return false;
+            }
+            return true;
         }
 
-        public async Task<List<PurchaseResponseModel>> GetUserPurchases(int id)
+        public async Task<PurchaseResponseModel> GetUserPurchases(int id)
         {
             var movies = await _userRepository.GetPurchasedMovies(id);
-            List<PurchaseResponseModel> purchases = new List<PurchaseResponseModel>();
+            List<PurchasedMovieResponseModel> purchasedMovieCards = new List<PurchasedMovieResponseModel>();
             foreach (var movie in movies)
             {
-                purchases.Add(new PurchaseResponseModel
+                purchasedMovieCards.Add(new PurchasedMovieResponseModel
                 {
-                    MovieId = movie.Id,
+                    Id = movie.Id,
+                    PosterUrl = movie.PosterUrl,
                     Title = movie.Title,
-                    PosterUrl = movie.PosterUrl
+                    Details = await GetPurchasesDetails(id, movie.Id)
                 });
             }
+            PurchaseResponseModel purchases = new PurchaseResponseModel
+            {
+                UserId = id,
+                TotalMoviesPurchased = 4,
+                PurchasedMovies = purchasedMovieCards
+            };
             return purchases;
         }
 
-        public Task<PurchaseDetailsResponseModel> GetPurchasesDetails(int userId, int movieId)
+        public async Task<PurchaseDetailsResponseModel> GetPurchasesDetails(int userId, int movieId)
         {
-            throw new NotImplementedException();
+            var purchase = (await _purchaseRepository.Get(p => p.MovieId == movieId && p.UserId == userId)).FirstOrDefault();
+            PurchaseDetailsResponseModel purchaseDetailsResponseModel = new PurchaseDetailsResponseModel
+            {
+                Id = purchase.Id,
+                UserId = purchase.UserId,
+                PurchaseNumber = purchase.PurchaseNumber,
+                TotalPrice = purchase.TotalPrice,
+                PurchaseDateTime = purchase.PurchaseDateTime,
+                MovieId = purchase.MovieId,
+                Title = purchase.Movie.Title,
+                PosterUrl = purchase.Movie.PosterUrl,
+                ReleaseDate = purchase.Movie.ReleaseDate
+            };
+            return purchaseDetailsResponseModel;
+
         }
     }
 }

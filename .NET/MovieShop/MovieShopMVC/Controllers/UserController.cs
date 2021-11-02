@@ -24,10 +24,17 @@ namespace MovieShopMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Purchase()
+        public async Task<IActionResult> Purchase(PurchaseRequestModel purchaseRequestModel)
         {
 
-            return View();
+            var userIdentity = this.User.Identity;
+            if (userIdentity != null && this.User.Identity.IsAuthenticated == true)
+            {
+                int userId = Convert.ToInt32(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                var b = await _userService.PurchaseMovie(purchaseRequestModel, userId);
+                return LocalRedirect("~/");
+            }
+            return RedirectToAction("Login", "Account");
         }
 
         [HttpGet]
@@ -61,20 +68,22 @@ namespace MovieShopMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Favorite()
+        [Authorize]
+        public async Task<IActionResult> Favorite(FavoriteRequestModel favoriteRequestModel)
         {
-            var userIdentity = this.User.Identity;
-            if (userIdentity != null && this.User.Identity.IsAuthenticated == true)
-            {
-                int userId = Convert.ToInt32(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-                FavoriteRequestModel favoriteRequestModel = new FavoriteRequestModel
-                {
-                    MovieId = 2
-                };
-                await _userService.AddFavorite(favoriteRequestModel);
-                return LocalRedirect("~/");
-            }
-            return RedirectToAction("Login", "Account");
+            //var userIdentity = this.User.Identity;
+            //if (userIdentity != null && this.User.Identity.IsAuthenticated == true)
+            //{
+            //    int userId = Convert.ToInt32(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            //    await _userService.AddFavorite(favoriteRequestModel, userId);
+            //    return LocalRedirect("~/");
+            //}
+            //return RedirectToAction("Login", "Account");
+
+            // Use authorize
+            int userId = _currentUserService.UserId;
+            await _userService.AddFavorite(favoriteRequestModel, userId);
+            return LocalRedirect("~/");
         }
 
         [HttpGet]
@@ -91,6 +100,15 @@ namespace MovieShopMVC.Controllers
             }
             return RedirectToAction("Login", "Account");
         }
+
+        //[HttpPost]
+        //[Authorize]
+        //public async Task<IActionResult> RemoveFavorite(FavoriteRequestModel favoriteRequestModel)
+        //{
+        //    var userId = _currentUserService.UserId;
+        //    await _userService.RemoveFavorite(favoriteRequestModel, userId);
+        //    return RedirectToAction("Favorites");
+        //}
 
         [HttpPost]
         public async Task<IActionResult> Review(ReviewRequestModel reviewRequestModel)

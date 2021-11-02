@@ -1,12 +1,53 @@
-﻿@model List<ApplicationCore.Models.MovieCardResponseModel>;
+﻿@model ApplicationCore.Models.PurchaseResponseModel
 
 <div class="rounded">
     <div class="container-fluid">
         <div class="row">
-            @foreach (var movieCard in Model)
+            @foreach (var movieCard in Model.PurchasedMovies)
             {
                 <div class="col-xl-2 col-sm-4 col-lg-3 col-6">
-                    <partial name="_MovieCard" model="movieCard" />
+                    <div class="card mb-4">
+                        <a asp-controller="Movies" asp-action="Details" asp-route-id="@movieCard.Id">
+                            <img src="@movieCard.PosterUrl" class="img-fluid" alt="@movieCard.Title" />
+                        </a>
+                        @*<form asp-controller="Purchase" asp-action="Details" asp-route-MovieId="@movieCard.Id" method="post">
+                            <button type="submit" class="btn btn-light" data-toggle="modal" data-target="#detail">Purchase Details</button>
+                        </form>*@
+                        <div class="btn btn-dark">
+                            <a href="#" data-toggle="modal" data-target="#detail" class="text-light">Purchase Details</a>
+                        </div>
+                        <div class="modal" tabindex="-1" role="dialog" id="detail">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">@movieCard.Title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="card">
+                                                    <img src="@movieCard.PosterUrl" class="img-fluid" alt="@movieCard.Title" />
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">Purchase Date <span class="badge badge-secondary rounded-pill">@movieCard.Details.PurchaseDateTime.Value.ToShortDateString()</span></li>
+                                                    <li class="list-group-item">Price <span class="badge badge-secondary rounded-pill">$@movieCard.Details.TotalPrice</span></li>
+                                                    <li class="list-group-item">Purchase Number <span class="badge badge-secondary rounded-pill">@movieCard.Details.PurchaseNumber</span></li>
+                                                    <li class="list-group-item"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    </div>
                 </div>
             }
         </div>
