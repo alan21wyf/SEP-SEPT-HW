@@ -1,0 +1,72 @@
+
+<div class="container-fluid" >
+    <div class="container-fluid row" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url( {{movie.backdropUrl}} ); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(Model.PosterUrl); background-repeat:no-repeat; background-size:cover;background-position:center center" for background image. Current is too low on resolution.-->
+        <div class="col-4">
+            <img src="{{movie.posterUrl}}" class="img-fluid"/>
+        </div>
+        <div class="col-5">
+            <div class="row"><h3>{{movie.title}}</h3></div>
+            <div class="row">
+                <span>{{movie.tagline}}</span>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <span>{{movie.runTime}} m|{{movie.releaseDate.slice(0,10)}}</span>
+                </div>
+                <div class="col-8">
+                    <span class="badge rounded-pill badge-secondary" style="color:white"  *ngFor="let g of genres">{{g.name}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <span class="badge" [ngClass]="{'badge-success':movie.rating>=8, 'badge-warning':movie.rating>=7 && movie.rating < 8, 'badge-danger':movie.rating < 7}">{{movie.rating}}</span>
+            </div>
+            <div class="row">
+                <p>{{movie.overview}}</p>
+            </div>
+        </div>
+        <div class="col-3 container-fluid">
+            <div class="row">
+                <a class="btn btn-outline-primary" asp-controller="User" asp-action="Review">Review</a>
+            </div>
+            <div class="row">
+                <!-- <form asp-controller="User" asp-action="Purchase" asp-route-MovieId="@Model.Id" method="post">
+                    <button type="submit" class="btn btn-light">Buy</button>
+                </form> -->
+                <a class="btn btn-light" asp-controller="User" asp-action="Purchase">Buy ${{movie.price}}</a>
+            </div>
+            <div class="row">
+                <form asp-controller="User" asp-action="Favorite" asp-route-MovieId="@Model.Id" method="post">
+                    <button type="submit" class="btn btn-light">Add To My Favorite</button>
+                </form>
+                <!-- @*<a class="btn btn-light" asp-controller="User" asp-action="Favorite">Add To My Favorite</a>*@ -->
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid row">
+        <div class="col-3">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">MOVIE FACTS</li>
+                <li class="list-group-item">Release Date <span class="badge badge-secondary rounded-pill">{{movie.releaseDate.slice(0, 10)}}</span></li>
+                <li class="list-group-item">Run Time <span class="badge badge-secondary rounded-pill">{{movie.runTime}}</span></li>
+                <li class="list-group-item">Box Office <span class="badge badge-secondary rounded-pill">${{movie.revenue}}</span></li>
+                <li class="list-group-item">Budget <span class="badge badge-secondary rounded-pill">${{movie.budget}}</span></li>
+                <li class="list-group-item"></li>
+            </ul>
+            <ul class="list-group list-group-flush" *ngFor="let trailer of trailers">
+                <li class="list-group-item">TRAILERS</li>
+                <li><a href="{{trailer.trailerUrl}}">{{trailer.name}}</a></li>
+            </ul>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-8">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cast</li>
+                <li class="list-group-item"  *ngFor="let cast of casts">
+                    <app-cast-info [cast] = 'cast'></app-cast-info>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
