@@ -20,13 +20,15 @@ namespace Infrastructure.Services
         private readonly IPurchaseRepository _purchaseRepository;
         private readonly IReviewRepository _reviewRepository;
         private readonly IFavoriteRepository _favoriteRepository;
+        private readonly IMovieRepository _movieRepository;
 
-        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, IFavoriteRepository favoriteRepository, IReviewRepository reviewRepository)
+        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, IFavoriteRepository favoriteRepository, IReviewRepository reviewRepository, IMovieRepository movieRepository)
         {
             _userRepository = userRepository;
             _purchaseRepository = purchaseRepository;
             _favoriteRepository = favoriteRepository;
             _reviewRepository = reviewRepository;
+            _movieRepository = movieRepository;
         }
 
         public async Task<int> ResigerUser(UserRegisterRequestModel requestModel)
@@ -243,12 +245,16 @@ namespace Infrastructure.Services
             {
                 throw new Exception("You have already purchased this movie.");
             }
-            
+
+            var movie = await _movieRepository.GetMovieById(purchaseRequest.MovieId);
+
             Purchase purchase = new Purchase
             {
                 MovieId = purchaseRequest.MovieId,
                 UserId = userId,
-                TotalPrice = 3.4m
+                TotalPrice = movie.Price.GetValueOrDefault(),
+                PurchaseDateTime = purchaseRequest.PurchaseDateTime.GetValueOrDefault(),
+                PurchaseNumber = purchaseRequest.PurchaseNumber.GetValueOrDefault()
             };
             var p = await _purchaseRepository.Add(purchase);
             return p == null ? false : true;
@@ -281,7 +287,7 @@ namespace Infrastructure.Services
             PurchaseResponseModel purchases = new PurchaseResponseModel
             {
                 UserId = id,
-                TotalMoviesPurchased = 4,
+                TotalMoviesPurchased = purchasedMovieCards.Count,
                 PurchasedMovies = purchasedMovieCards
             };
             return purchases;

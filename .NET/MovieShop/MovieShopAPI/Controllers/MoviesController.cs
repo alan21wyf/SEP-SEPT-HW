@@ -92,8 +92,9 @@ namespace MovieShopAPI.Controllers
 
         [HttpGet]
         [Route("genre/{genreId:int}")]
-        public async Task<IActionResult> GetMoviesByGenre(int genreId)
+        public async Task<IActionResult> GetMoviesByGenre(int genreId, [FromQuery] int pagesize = 30, [FromQuery] int pageIndex = 1)
         {
+            // LinQ moviegenres.skip(pageindex-1).take(pagesize).tolistasync()
             var movies = await _genreService.GetMoviesByGenre(genreId);
             if (movies == null)
             {
