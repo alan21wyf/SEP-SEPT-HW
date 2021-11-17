@@ -1,0 +1,12 @@
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.deps.json
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\ref\Yifan_Wu.CabApp.ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.pdb
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.csproj.AssemblyReference.cache
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.AssemblyInfoInputs.cache
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.AssemblyInfo.cs
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.csproj.CoreCompileInputs.cache
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ref\Yifan_Wu.CabApp.ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\Yifan_Wu.CabApp.ApplicationCore.pdb

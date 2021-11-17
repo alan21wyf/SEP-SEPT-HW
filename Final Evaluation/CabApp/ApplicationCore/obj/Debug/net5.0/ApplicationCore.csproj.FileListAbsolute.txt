@@ -1,0 +1,12 @@
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\ApplicationCore.deps.json
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\ref\ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\bin\Debug\net5.0\ApplicationCore.pdb
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csproj.AssemblyReference.cache
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfoInputs.cache
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfo.cs
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csproj.CoreCompileInputs.cache
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ref\ApplicationCore.dll
+D:\Antra\Final Evaluation Sept\CabApp\ApplicationCore\obj\Debug\net5.0\ApplicationCore.pdb
