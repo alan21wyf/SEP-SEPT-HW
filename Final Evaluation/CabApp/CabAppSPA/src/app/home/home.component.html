@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="rounded col-10">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-sm-4 col-lg-3 col-6" *ngFor="let cabtypeCard of cabTypeCards">
+                    <app-cabtype-card [cabTypeCard]="cabtypeCard"></app-cabtype-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rounded col-2">
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/cabtype','create']">Create</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/cabtype','delete']">Delete</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/cabtype','update']">Update</a>
+    </div>
+</div>

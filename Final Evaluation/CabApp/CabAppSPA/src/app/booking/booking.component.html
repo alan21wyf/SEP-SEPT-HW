@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="rounded col-10">
+        <li class="list-group-item"  *ngFor="let booking of bookings">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Booking Date</th>
+                    <th scope="col">Booking Time</th>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                    <th scope="col">Pickup Address</th>
+                    <th scope="col">Landmark</th>
+                    <th scope="col">Pickup Date</th>
+                    <th scope="col">Pickup Time</th>
+                    <th scope="col">CabTypeName</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{booking.id}}</th>
+                    <td>{{booking.email}}</td>
+                    <td>{{booking.bookingDate}}</td>
+                    <td>{{booking.bookingTime}}</td>
+                    <td>{{booking.fromPlaceName}}</td>
+                    <td>{{booking.toPlaceName}}</td>
+                    <td>{{booking.pickupAddress}}</td>
+                    <td>{{booking.landmark}}</td>
+                    <td>{{booking.pickupDate}}</td>
+                    <td>{{booking.pickupTime}}</td>
+                    <td>{{booking.cabTypeName}}</td>
+                    <td>{{booking.contactNo}}</td>
+                    <td>{{booking.status}}</td>
+                  </tr>
+                </tbody>
+              </table>        </li>
+    </div>
+    <div class="rounded col-2">
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/bookings','create']">Create</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/bookings','delete']">Delete</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/bookings','update']">Update</a>
+    </div>
+</div>

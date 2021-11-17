@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="rounded col-10">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-sm-4 col-lg-3 col-6" *ngFor="let place of places">
+                    <div class="card mb-4">
+                        <div class="card-header">{{place.id}}</div>
+                        <div class="list-group-item">{{place.placeName}}</div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rounded col-2">
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/place','create']">Create</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/place','delete']">Delete</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/place','update']">Update</a>
+    </div>
+</div>

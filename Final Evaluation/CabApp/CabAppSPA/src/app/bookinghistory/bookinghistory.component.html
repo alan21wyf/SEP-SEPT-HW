@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="rounded col-10">
+        <li class="list-group-item"  *ngFor="let bookingHist of bookingHists">
+
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Email</th>
+                <th scope="col">Booking Date</th>
+                <th scope="col">Booking Time</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Pickup Address</th>
+                <th scope="col">Landmark</th>
+                <th scope="col">Pickup Date</th>
+                <th scope="col">Pickup Time</th>
+                <th scope="col">CabTypeName</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Status</th>
+                <th scope="col">Completion Time</th>
+                <th scope="col">Charge</th>
+                <th scope="col">Feedback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{bookingHist.id}}</th>
+                <td>{{bookingHist.email}}</td>
+                <td>{{bookingHist.bookingDate}}</td>
+                <td>{{bookingHist.bookingTime}}</td>
+                <td>{{bookingHist.fromPlaceName}}</td>
+                <td>{{bookingHist.toPlaceName}}</td>
+                <td>{{bookingHist.pickupAddress}}</td>
+                <td>{{bookingHist.landmark}}</td>
+                <td>{{bookingHist.pickupDate}}</td>
+                <td>{{bookingHist.pickupTime}}</td>
+                <td>{{bookingHist.cabTypeName}}</td>
+                <td>{{bookingHist.contactNo}}</td>
+                <td>{{bookingHist.status}}</td>
+                <td>{{bookingHist.comp_time}}</td>
+                <td>{{bookingHist.charge}}</td>
+                <td>{{bookingHist.feedback}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+    </div>
+    <div class="rounded col-2">
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/bookingshistory','create']">Create</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/bookingshistory','delete']">Delete</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block mb-1" [routerLink]="['/bookingshistory','update']">Update</a>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="col-11">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Current Bookings For <b>{{this.cabType}}</b></li>
+        <li class="list-group-item"  *ngFor="let booking of bookings">
+            <app-bookings-info [booking] = 'booking'></app-bookings-info>
+        </li>
+    </ul>
+</div>

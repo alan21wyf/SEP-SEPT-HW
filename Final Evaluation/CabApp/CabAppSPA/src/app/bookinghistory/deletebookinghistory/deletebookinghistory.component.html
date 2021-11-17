@@ -1,0 +1,22 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 text-dark">
+        <h3> Deleting Booking History </h3>
+
+        <form (ngSubmit)="deleteSubmit()">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label">Enter Booking History Id</label>
+                <input class="form-control" name="id" [(ngModel)]="deleteBookingHist.id" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

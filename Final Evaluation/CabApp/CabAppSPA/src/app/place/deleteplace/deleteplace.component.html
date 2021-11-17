@@ -1,0 +1,22 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 text-dark">
+        <h3> Deleting Place </h3>
+
+        <form (ngSubmit)="deleteSubmit()">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label">Enter Place Id</label>
+                <input class="form-control" placeholder="Enter Place Id" name="id" [(ngModel)]="deletePlace.id" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

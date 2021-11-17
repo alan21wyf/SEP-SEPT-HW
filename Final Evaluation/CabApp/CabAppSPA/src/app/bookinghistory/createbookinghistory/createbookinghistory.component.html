@@ -1,0 +1,87 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 text-dark">
+        <h3> Adding New Booking History </h3>
+
+        <form (ngSubmit)="createSubmit()">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label">Enter Email</label>
+                <input class="form-control" name="email" [(ngModel)]="createBookingHist.email" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Booking Date</label>
+                <input type="date" class="form-control" name="bookingDate" [(ngModel)]="createBookingHist.bookingDate" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Booking Time</label>
+                <input class="form-control" name="bookingTime" [(ngModel)]="createBookingHist.bookingTime" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter From Place Id</label>
+                <input class="form-control" name="fromPlace" [(ngModel)]="createBookingHist.fromPlace" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter To Place Id</label>
+                <input class="form-control" name="toPlace" [(ngModel)]="createBookingHist.toPlace" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Pick-up Address</label>
+                <input class="form-control" name="pickupAddress" [(ngModel)]="createBookingHist.pickupAddress" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Landmark</label>
+                <input class="form-control" name="landmark" [(ngModel)]="createBookingHist.landmark" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Pick-up Date</label>
+                <input type="date" class="form-control" name="pickupDate" [(ngModel)]="createBookingHist.pickupDate" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter CabType Id</label>
+                <input class="form-control" name="cabTypeId" [(ngModel)]="createBookingHist.cabTypeId" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Contact Number</label>
+                <input class="form-control" name="contactNo" [(ngModel)]="createBookingHist.contactNo" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Status</label>
+                <input class="form-control" name="status" [(ngModel)]="createBookingHist.status" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Completion Time</label>
+                <input class="form-control" name="comp_time" [(ngModel)]="createBookingHist.comp_time" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Charge</label>
+                <input class="form-control" name="charge" [(ngModel)]="createBookingHist.charge" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Feedback</label>
+                <input class="form-control" name="feedback" [(ngModel)]="createBookingHist.feedback" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

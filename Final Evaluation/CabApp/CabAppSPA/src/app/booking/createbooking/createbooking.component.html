@@ -1,0 +1,72 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 text-dark">
+        <h3> Adding New Booking </h3>
+
+        <form (ngSubmit)="createSubmit()">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label">Enter Email</label>
+                <input class="form-control" name="email" [(ngModel)]="createBooking.email" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Booking Date</label>
+                <input type="date" class="form-control" name="bookingDate" [(ngModel)]="createBooking.bookingDate" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Booking Time</label>
+                <input class="form-control" name="bookingTime" [(ngModel)]="createBooking.bookingTime" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter From Place Id</label>
+                <input class="form-control" name="fromPlace" [(ngModel)]="createBooking.fromPlace" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter To Place Id</label>
+                <input class="form-control" name="toPlace" [(ngModel)]="createBooking.toPlace" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Pick-up Address</label>
+                <input class="form-control" name="pickupAddress" [(ngModel)]="createBooking.pickupAddress" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Landmark</label>
+                <input class="form-control" name="landmark" [(ngModel)]="createBooking.landmark" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Pick-up Date</label>
+                <input type="date" class="form-control" name="pickupDate" [(ngModel)]="createBooking.pickupDate" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter CabType Id</label>
+                <input class="form-control" name="cabTypeId" [(ngModel)]="createBooking.cabTypeId" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Contact Number</label>
+                <input class="form-control" name="contactNo" [(ngModel)]="createBooking.contactNo" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Status</label>
+                <input class="form-control" name="status" [(ngModel)]="createBooking.status" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

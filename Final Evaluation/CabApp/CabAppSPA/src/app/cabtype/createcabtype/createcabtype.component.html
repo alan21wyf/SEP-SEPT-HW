@@ -1,0 +1,22 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 text-dark">
+        <h3> Adding New Cab Type </h3>
+
+        <form (ngSubmit)="createSubmit()">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label">Enter Cab Type Name</label>
+                <input class="form-control" placeholder="Enter Cab Type Name" name="cabTypeName" [(ngModel)]="createCabType.cabTypeName" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

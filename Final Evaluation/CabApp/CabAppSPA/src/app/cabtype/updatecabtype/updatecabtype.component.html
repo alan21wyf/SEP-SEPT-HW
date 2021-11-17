@@ -1,0 +1,27 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 text-dark">
+        <h3>  Updating Cab Type </h3>
+
+        <form (ngSubmit)="updateSubmit()">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label">Enter Old Cab Type Name</label>
+                <input class="form-control" placeholder="Enter Old Cab Type Name" name="oldCabTypeName" [(ngModel)]="updateCabType.oldCabTypeName" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter New Cab Type Name</label>
+                <input class="form-control" placeholder="Enter New Cab Type Name" name="newCabTypeName" [(ngModel)]="updateCabType.newCabTypeName" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>
